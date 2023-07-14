@@ -19,5 +19,6 @@ from django.urls import path
 from . import concept_views
 
 urlpatterns = [
-    path('admin/', admin.site.urls)
+    path('admin/', admin.site.urls),
+    path('wysy/', concept_views.aw_base_concept)
 ]
