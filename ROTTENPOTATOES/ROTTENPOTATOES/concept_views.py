@@ -1,7 +1,11 @@
-from django.http import HttpResponse
-from django.template import loader
+from django.shortcuts import render
 
 
 def pk_index(request):
-    template = loader.get_template('PK-home_page.html')
-    return HttpResponse(template.render({}, request))
+    return render(request, 'PK-home_page.html')
+
+def pk_film_ranking(request):
+    return render(request, 'PK-film_ranking.html')
+
+def pk_quiz(request):
+    return render(request, 'PK-quiz.html')

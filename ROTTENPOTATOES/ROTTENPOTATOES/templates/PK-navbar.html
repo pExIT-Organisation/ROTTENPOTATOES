@@ -1,0 +1,8 @@
+<div>
+    {% url 'pk_index' as index_url %}
+    <span>{% if request.path == index_url %}Home{% else %}<a href="{{ index_url }}">Home</a>{% endif %}</span>
+    {% url 'pk_film_ranking' as film_ranking_url %}
+    <span>{% if request.path == film_ranking_url %}Ranking{% else %}<a href="{{ film_ranking_url }}">Ranking</a>{% endif %}</span>
+    {% url 'pk_quiz' as quiz_url %}
+    <span>{% if request.path == quiz_url %}Quiz{% else %}<a href="{{ quiz_url }}">Quiz</a>{% endif %}</span>
+</div>

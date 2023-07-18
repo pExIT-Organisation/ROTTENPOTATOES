@@ -20,5 +20,7 @@ from . import concept_views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('pawel', concept_views.pk_index)
+    path('pk_index', concept_views.pk_index, name='pk_index'),
+    path('pk_film_ranking', concept_views.pk_film_ranking, name='pk_film_ranking'),
+    path('pk_quiz', concept_views.pk_quiz, name='pk_quiz')
 ]
