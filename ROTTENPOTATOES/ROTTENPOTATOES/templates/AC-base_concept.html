@@ -1,22 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Website</title>
+    <title>ROTTENPOTATOES</title>
     <style>
         body {
-            background-color: #f2f2f2;
-            font-family: Arial, sans-serif;
             text-align: center;
         }
 
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
         h1 {
-            font-size: 48px;
-            color: #333333;
-            margin-top: 25px;
+            margin: 0;
+        }
+
+        .login-button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .menu-buttons {
+            margin-top: 50px;
+        }
+
+        .menu-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
         }
     </style>
 </head>
 <body>
-    <h1>R0TTENP0TAT0ES</h1>
+    <header>
+        <h1>ROTTENPOTATOES</h1>
+        <a href="#" class="login-button">Login</a>
+    </header>
+
+    <div class="menu-buttons">
+        <a href="film_voting.html">Film Voting</a>
+        <a href="quiz.html">Quiz</a>
+    </div>
 </body>
 </html>
