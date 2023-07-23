@@ -16,10 +16,16 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.contrib.auth import views as auth_views
+
 from . import concept_views
-from django.views.generic.base import TemplateView
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('cichy', TemplateView.as_view(template_name='AC-base_concept.html'), name="cichy"),
+    path('cichy', concept_views.cichy, name='cichy'),
+
+    # Django authorization
+    path('accounts/login', auth_views.LoginView.as_view(template_name='accounts/login.html'), name='login'),
+    path('accounts/logout', auth_views.LogoutView.as_view(), name='logout'),
 ]
