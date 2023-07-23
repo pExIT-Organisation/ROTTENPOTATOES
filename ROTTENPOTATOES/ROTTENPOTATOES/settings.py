@@ -119,6 +119,9 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
+LOGIN_URL = ''
+LOGIN_REDIRECT_URL = 'cichy' # (Homepage in future)
+LOGOUT_REDIRECT_URL = 'cichy'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
