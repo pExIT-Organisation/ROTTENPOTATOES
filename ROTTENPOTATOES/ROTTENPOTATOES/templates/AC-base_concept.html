@@ -37,6 +37,14 @@
             border-radius: 5px;
         }
 
+        .registration-button {
+            padding: 10px 20px;
+            background-color: #ffa500;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
         .menu-buttons {
             margin-top: 50px;
         }
@@ -59,6 +67,7 @@
             <a href="{% url 'logout' %}" class="logout-button">Logout</a>
             <span>Hello {{ user.username }}!</span>
         {% else %}
+            <a href="{% url 'register' %}" class="registration-button">Registration</a>
             <a href="{% url 'login' %}" class="login-button">Login</a>
         {% endif %}
     </header>
