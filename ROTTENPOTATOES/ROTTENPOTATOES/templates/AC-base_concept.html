@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ROTTENPOTATOES</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        header {
+            background-color: #f2f2f2;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        h1 {
+            margin: 0;
+            flex-grow: 1;
+            text-align: center;
+        }
+
+        .login-button {
+            padding: 10px 20px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .logout-button {
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .registration-button {
+            padding: 10px 20px;
+            background-color: #ffa500;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .menu-buttons {
+            margin-top: 50px;
+        }
+
+        .menu-buttons a {
+            display: inline-block;
+            margin: 10px;
+            padding: 10px 20px;
+            background-color: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ROTTENPOTATOES</h1>
+        {% if user.is_authenticated %}
+            <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+            <span>Hello {{ user.username }}!</span>
+        {% else %}
+            <a href="{% url 'register' %}" class="registration-button">Registration</a>
+            <a href="{% url 'login' %}" class="login-button">Login</a>
+        {% endif %}
+    </header>
+
+    <div class="menu-buttons">
+        <a href="film_voting.html">Film Voting</a>
+        <a href="quiz.html">Quiz</a>
+    </div>
+</body>
+</html>
