@@ -1,7 +1,7 @@
-from django.contrib import admin
-from django.urls import path, include
+from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('movie1/', views.movie1, name="movie1"),
+    path('movie-list/', views.list_of_movies, name="movie-list"),
+    path('movie/<str:movie_name>/', views.movie_detail, name='movie_detail'),
 ]
