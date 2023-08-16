@@ -17,5 +17,3 @@ def movie_detail(request, movie_name):
 
     context = {'movie': movie}
     return render(request, 'movie_details.html', context)
-
-
