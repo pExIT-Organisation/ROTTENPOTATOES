@@ -10,5 +10,7 @@ class Movie(models.Model):
     description = models.CharField(max_length=300)
     director = models.CharField(max_length=50, default=" ")
 
+    movies_manager = models.Manager()
+
     def __str__(self):
         return f"{self.name} ({self.release_year})"
